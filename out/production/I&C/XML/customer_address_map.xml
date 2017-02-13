@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customer name="Jaap">
+    <addresses>
+        <entry>
+            <key>Shipping</key>
+            <value>
+                <city>Spakenburg</city>
+                <street>Paulus Potterstraat 10 </street>
+                <zip>8252GH </zip>
+            </value>
+        </entry>
+        <entry>
+            <key>billing</key>
+            <value>
+                <city>Bunschoten</city>
+                <street>Rembrandt van Rijnstraat 4</street>
+                <zip>3751VK</zip>
+            </value>
+        </entry>
+    </addresses>
+    <dateOfBirth>12-December-1995</dateOfBirth>
+</customer>

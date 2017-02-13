@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by jkkoe on 07/02/2017.
@@ -12,10 +13,11 @@ import java.util.HashMap;
 public class Customer {
     private String name;
     private String dateOfBirth;
-    private HashMap<String, Object> addresses;
+    private Map<String, Address> addresses;
+//    private MAddress address;
 
     public Customer(){
-        addresses = new HashMap<String, Object>();
+        addresses = new HashMap<>();
     }
 
     public String getDateOfBirth() {
@@ -37,16 +39,15 @@ public class Customer {
     }
 
     public String toString(){
-        return "XML.Customer [name=" + name + ", Date of Birth=" + dateOfBirth + ", Addresses=" + addresses + "]";
+        return "XML.MCustomer [name=" + name + ", Date of Birth=" + dateOfBirth + ", Addresses=" + addresses + "]";
      }
 
     @XmlElement
-    public HashMap<String, Object> getAddresses(){
+    public Map<String, Address> getAddresses(){
         return addresses;
      }
 
-    public void setAddresses(String s, Object o){
-        addresses.put(s, o);
+    public void setAddresses(Map<String, Address> addresses) {
+        this.addresses = addresses;
     }
-
 }

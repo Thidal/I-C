@@ -10,16 +10,10 @@ import java.io.File;
  */
 public class JaxbMain2 {
     public static void main(String[] args) throws JAXBException {
-
-    try {
-        File file = new File("C:\\Users\\jkkoe\\Desktop\\customer_address.xml");
+        File file = new File("C:\\Users\\jkkoe\\Desktop\\GrailsWorkspace\\I&C\\src\\XML\\customer_address_map.xml");
         JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         Customer customer = (Customer) jaxbUnmarshaller.unmarshal(file);
-        System.out.println(customer);
-
-    }catch (JAXBException e){
-        e.printStackTrace();
-    }
+        System.out.println(customer.toString());
     }
 }
